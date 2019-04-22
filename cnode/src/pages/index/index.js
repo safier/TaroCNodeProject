@@ -1,8 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import {getTopicList} from '../../utils/request';
 import './index.less'
+import Menu from '../../components/menu/menu'
 
 class Index extends Component {
 
@@ -17,7 +17,7 @@ class Index extends Component {
   componentWillUnmount () { }
 
   componentDidMount() {
-    getTopicList()
+    
   }
 
   componentDidShow () { }
@@ -27,7 +27,7 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <View><Text>Hello, World</Text></View>
+          <Menu/>
       </View>
     )
   }
